@@ -56,10 +56,6 @@ youtube.com##.ytp-ce-element
 ! WATERMARK
 youtube.com##.iv-branding
 
-! AMBIENT MODE (Darkening everything but the player)
-youtube.com###player>#cinematics.ytd-watch-flexy
-youtube.com###player>#cinematics-container
-
 !!! VIDEO PLAYER BUTTONS
 
 ! MINIPLAYER BUTTON
@@ -83,6 +79,7 @@ www.youtube.com###ytp-id-18 > .ytp-panel > .ytp-panel-menu > div.ytp-menuitem:ha
 
 ! DOWNLOAD BUTTON
 youtube.com##ytd-download-button-renderer
+
 ! DOWNLOAD WORKER
 ||www.youtube.com/s/player/*/player_ias.vflset/*/offline.js$script
 
