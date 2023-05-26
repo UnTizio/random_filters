@@ -1,0 +1,65 @@
+! Title: Byelzebub's Reddit Debloating List
+! Last Modified: 03:57 26/05/2023
+! Expires: 7 Days (Update Frequency)
+! Description: Debloats Reddit.
+! Works with: uBlock Origin
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!                                   REDDIT                                     !!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!         REDDIT TOP BAR            ||||
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! ADVERTISE BUTTON
+www.reddit.com##._24UNt1hkbrZxLzs5vkvuDh
+
+! COIN BUTTON
+www.reddit.com##span._3dZnYgFFpifT-M_Vs2FAq6
+
+! POPULAR BUTTON
+www.reddit.com##._23q1waDr4n_2fR5A7zcZzb.x0hiXHicn7r3BG9m1FJH4
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!         REDDIT SIDEBAR            ||||
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! HIDE REDDIT PREMIUM
+www.reddit.com##._1b1Jalg2nxA_Z-BjKXRfAV
+
+! HIDE "PRIVACY POLICY etc." TAB
+www.reddit.com##._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV._2wqyhtudP4weVGsZdVXJgt > ._3RPJ8hHnfFohktLZca18J6
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!     REDDIT USER DROPDOWN MENU     ||||
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! HIDE "ADVERTISE ON REDDIT" ON USER DROPDOWN MENU
+www.reddit.com##a.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS:has-text(Advertise on Reddit)
+
+! HIDE "PREMIUM" ON USER DROPDOWN MENU
+www.reddit.com##a.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS:has-text(Premium)
+
+! HIDE "HELP CENTER" ON USER DROPDOWN MENU
+www.reddit.com##a.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS:has-text(Help Center)
+
+! HIDE REDDIT COPYRIGHT
+www.reddit.com##._2XCnMY85ivEZUL6cAgK0nV
+
+! HIDE TERMS & POLICIES
+www.reddit.com##div > button.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS > .f8nXLisWxOYzMMl1uIAP3:has-text(Terms & Policies)
+ 
+! HIDE "ABOUT REDDIT"
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(About Reddit)
+
+! HIDE STUFF YOU DON'T NEED
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(Blog)
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(Careers)
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(Press)
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(Reddit iOS)
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(Reddit Android)
+www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af:has-text(Rereddit)
+
+! HIDE COINS
+www.reddit.com##._3zu1R6cDitNjrJaFA1VPXj._3fbofimxVp_hpVM6I1TGMS:has-text(Coins)
