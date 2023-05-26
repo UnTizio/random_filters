@@ -71,6 +71,9 @@ www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC
 ! HIDE COINS
 www.reddit.com##._3zu1R6cDitNjrJaFA1VPXj._3fbofimxVp_hpVM6I1TGMS:has-text(Coins)
 
+! HIDE "MORE" DROPDOWN MENU
+www.reddit.com##button.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS:has-text(More)
+
 ! HIDE "TERMS & POLICIES" DROPDOWN MENU
 www.reddit.com##button.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS:has-text(Terms & Policies)
 
