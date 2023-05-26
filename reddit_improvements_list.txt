@@ -21,6 +21,10 @@ www.reddit.com##span._3dZnYgFFpifT-M_Vs2FAq6
 ! POPULAR BUTTON
 www.reddit.com##._23q1waDr4n_2fR5A7zcZzb.x0hiXHicn7r3BG9m1FJH4
 
+! REMOVE TRENDS ON SEARCH BAR
+www.reddit.com##._1H3lgd1i4NTn9aM5VR9BQX._2TJNEv970Kn5chU69vgAB4._20OHBqoDD71_8fv7tuG6u6
+www.reddit.com##._3R_dvs6bfcA-tygC7FL7kx._2NH7qxA8P_UowZKF4-LUNe._3C9CntSKG4Z9k6ul3_ugNH._37mWd5gyv2BM4g00nmlZuD._3LzqitwwvqMy0VShIuQwvX:has-text(Trending today)
+
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!         REDDIT SIDEBAR            ||||
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
