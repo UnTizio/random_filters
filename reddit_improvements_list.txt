@@ -1,5 +1,5 @@
 ! Title: Byelzebub's Reddit Debloating List
-! Last Modified: 04:27 26/05/2023
+! Last Modified: 04:31 26/05/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Debloats Reddit.
 ! Works with: uBlock Origin
