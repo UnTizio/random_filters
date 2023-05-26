@@ -2,7 +2,7 @@
 ! Last Modified: 02:49 26/05/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Block stuff in YouTube's UI and improves it.
-! Works Best With: uBlock Origin or AdGuard
+! Works with: uBlock Origin.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!                                   YOUTUBE                                    !!!!
