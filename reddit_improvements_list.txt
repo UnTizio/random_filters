@@ -1,5 +1,5 @@
 ! Title: Byelzebub's Reddit Debloating List
-! Last Modified: 04:24 26/05/2023
+! Last Modified: 04:27 26/05/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Debloats Reddit.
 ! Works with: uBlock Origin
@@ -34,6 +34,9 @@ www.reddit.com##._1b1Jalg2nxA_Z-BjKXRfAV
 
 ! HIDE "PRIVACY POLICY etc." TAB
 www.reddit.com##._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV._2wqyhtudP4weVGsZdVXJgt > ._3RPJ8hHnfFohktLZca18J6
+
+! RECENT POSTS
+www.reddit.com##._3Im6OD67aKo33nql4FpSp_:has-text(Recent posts)
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!     REDDIT USER DROPDOWN MENU     ||||
