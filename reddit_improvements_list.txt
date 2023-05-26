@@ -69,3 +69,32 @@ www.reddit.com##button.GCltVwsXPu5lE-gs4Nucu._3fbofimxVp_hpVM6I1TGMS:has-text(Te
 
 ! HIDE "TERMS & POLICIES" DROPDOWN MENU'S ELEMENTS
 www.reddit.com##._27B2PE8qRdRlQHbzPBidG6.sJncFX1AQ0-0SzCGc9V5L._3SDj_IT6ZaqCbKfC4eTjb2 > a.NiNJXib52w4C8FUidB5af
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!         REDDIT POST VIEW          ||||
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! REMOVE MODERATORS TAB
+www.reddit.com##._31AVRNJbVMh2DUFRrpCQcD > div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV:has-text(Moderators)
+
+! REMOVE AWARD BUTTON
+www.reddit.com##._1hwEKkB_38tIoal6fcdrt9 > ._3-miAEojrCvx_4FQ8x3P-s > div._3U_7i38RDPV5eBv7m4M-9J:has-text(Award)
+
+! COMPACTING UI WHEN VIEWING POST (REMOVE SPACE BETWEEN BUTTONS AND POST)
+www.reddit.com##._1Bdk-WLPvP2xHwSSQ3qsHq
+
+! REMOVE "VIEW DISCUSSION IN ANOTHER COMMUNITY"
+www.reddit.com##._1k2YW82YLtn1xvksm7RHIO
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!         REDDIT SUB VIEW           ||||
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! REMOVE MODERATORS TAB
+www.reddit.com##div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV:has-text(Moderators)
+
+! REMOVE EVENTS TAB
+www.reddit.com##div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV:has-text(Events)
+
+! REMOVE SUBREDDIT PROFILE PREVIEW
+www.reddit.com##._39-woRduNuowN7G4JTW4I8
