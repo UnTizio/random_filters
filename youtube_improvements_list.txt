@@ -300,3 +300,6 @@ www.youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-render
 ! HIDE "SIGN IN" STUFF
 www.youtube.com###buttons > ytd-button-renderer.ytd-masthead.style-scope > yt-button-shape:has-text(Sign in)
 www.youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
+
+! REMOVE MINIPLAYER
+www.youtube.com##ytd-miniplayer
