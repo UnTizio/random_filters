@@ -1,7 +1,7 @@
-! Title: Byelzebub's Reddit Debloating List
-! Last Modified: 04:31 26/05/2023
+! Title: Byelzebub's Reddit Improvements List
+! Last Modified: 15:07 27/05/2023
 ! Expires: 7 Days (Update Frequency)
-! Description: Debloats Reddit.
+! Description: Removes some stuff from Reddit.
 ! Works with: uBlock Origin
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -105,6 +105,9 @@ www.reddit.com##div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P
 
 ! REMOVE EVENTS TAB
 www.reddit.com##div._2vEf-C2keJaBMY9qk_BxVn > ._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV:has-text(Events)
+
+! HIDE "AWARD" BUTTON FOR POSTS
+www.reddit.com##._28vEaVlLWeas1CDiLuTCap._1EWxiIupuIjiExPQeK4Kud._3yh2bniLq7bYr4BaiXowdO.YszYBnnIoNY8pZ6UwCivd._10K5i7NW6qcm-UoCtpB3aK
 
 ! REMOVE SUBREDDIT PROFILE PREVIEW
 www.reddit.com##._39-woRduNuowN7G4JTW4I8
