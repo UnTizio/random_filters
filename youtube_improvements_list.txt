@@ -296,3 +296,6 @@ www.youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
 
 ! REMOVE MINIPLAYER
 www.youtube.com##ytd-miniplayer
+
+! HIDE "COMMENTS ARE TURNED OFF" MESSAGE
+www.youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
