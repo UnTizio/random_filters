@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 15:08 27/05/2023
+! Last Modified: 02:27 30/05/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -12,37 +12,35 @@
 !!!!         YOUTUBE SIDEBAR           ||||
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-! HIDE SIDEBAR BOTTOM USELESS INFO
-www.youtube.com###guide-links-primary
-www.youtube.com###guide-links-secondary
-www.youtube.com###copyright
+! HIDE SIDEBAR FOOTER
+www.youtube.com###footer
 
 ! HIDE "DOWNLOADS"
-www.youtube.com###downloads-entry > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint
+www.youtube.com##ytd-guide-downloads-entry-renderer
 
 ! HIDE "EXPLORE"
-www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:has-text(Explore)
+www.youtube.com##ytd-guide-section-renderer:has-text(Explore)
 
-! HIDE "OTHER FROM YOUTUBE"
-www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:has-text(More from YouTube)
+! HIDE "MORE FROM YOUTUBE"
+www.youtube.com##ytd-guide-section-renderer:has-text(More from YouTube)
 
 ! HIDE SHORTS
 www.youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
 
-! REMOVE "SEND FEEDBACK"
-www.youtube.com##ytd-guide-entry-renderer.ytd-guide-section-renderer.style-scope > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has-text(Send feedback)
+! REMOVE "REPORT HISTORY"
+www.youtube.com##ytd-guide-entry-renderer:has-text(Report history)
 
 ! REMOVE "HELP"
-www.youtube.com##ytd-guide-entry-renderer.ytd-guide-section-renderer.style-scope > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has-text(Help)
+www.youtube.com##ytd-guide-entry-renderer:has-text(Help)
 
-! REMOVE "REPORT HISTORY"
-www.youtube.com##ytd-guide-entry-renderer.ytd-guide-section-renderer.style-scope > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has-text(Report history)
+! REMOVE "SEND FEEDBACK"
+www.youtube.com##ytd-guide-entry-renderer:has-text(Send feedback)
 
 ! HIDE "LIBRARY" BUTTON
-www.youtube.com###header-entry > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has-text(Library)
+www.youtube.com##ytd-guide-entry-renderer:has-text(Library)
 
 ! HIDE "HISTORY" BUTTON
-www.youtube.com###section-items > ytd-guide-entry-renderer.ytd-guide-collapsible-section-entry-renderer.style-scope > .ytd-guide-entry-renderer.style-scope.yt-simple-endpoint:has-text(History)
+www.youtube.com##ytd-guide-entry-renderer:has-text(History)
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!        YT VIDEO WATCHING          ||||
@@ -62,14 +60,16 @@ youtube.com##.iv-branding
 youtube.com##.ytp-button.ytp-miniplayer-button
 
 ! AUTOPLAY BUTTON
-www.youtube.com##.ytp-autonav-toggle-button-container
 www.youtube.com##button.ytp-button:nth-of-type(6)
 
 ! REMOVE "AMBIENT MODE" IN PLAYER SETTINGS
-www.youtube.com###ytp-id-18 > .ytp-panel > .ytp-panel-menu > div.ytp-menuitem:has-text(Ambient mode)
+www.youtube.com##.ytp-menuitem:has-text(Ambient mode)
 
 ! REMOVE "ANNOTATIONS" IN PLAYER SETTINGS
-www.youtube.com###ytp-id-18 > .ytp-panel > .ytp-panel-menu > div.ytp-menuitem:has-text(Annotations)
+www.youtube.com##.ytp-menuitem:has-text(Annotations)
+
+! REMOVE "FROM *YOUTUBER*" ON TOP RIGHT
+www.youtube.com##.ytp-cards-button-icon-default
 
 !!! INTERACTION BUTTONS
 
@@ -87,24 +87,21 @@ youtube.com##ytd-download-button-renderer
 youtube.com##ytd-button-renderer:has(>yt-button-shape:has(>button.yt-spec-button-shape-next--disabled))
 
 ! HIDE MEMBERSHIP BUTTON
-www.youtube.com##.ytd-video-owner-renderer.style-scope > yt-button-shape
+www.youtube.com###sponsor-button
 
 ! UNDER DESCRIPTION CONTAINER GAME PLAYED
-www.youtube.com##.ytd-metadata-row-container-renderer.style-scope > .ytd-rich-metadata-row-renderer.style-scope
+www.youtube.com###always-shown
 
-! HIDE "THANKS" BUTTON
-www.youtube.com###flexible-item-buttons > ytd-button-renderer.ytd-menu-renderer.style-scope > yt-button-shape
+! HIDE "THANKS" AND "CLIP" BUTTONS
+www.youtube.com###flexible-item-buttons
 
 ! HIDE "SHARE" BUTTON
-www.youtube.com###top-level-buttons-computed > ytd-button-renderer.ytd-menu-renderer.style-scope
-
-! RANDOM SPACE BETWEEN LIKES AND THREE DOTS
-www.youtube.com###flexible-item-buttons
+www.youtube.com##ytd-button-renderer:has-text(Share)
 
 !!! SIDEBAR
 
-! SIDEBAR VIDEOS FILTER
-www.youtube.com###scroll-container > .yt-chip-cloud-renderer.style-scope
+! SIDEBAR CHIPS
+www.youtube.com##yt-related-chip-cloud-renderer
 
 ! SIDEBAR FUNDRAISER
 youtube.com###donation-shelf
@@ -175,7 +172,6 @@ www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [ov
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! REMOVE "INFORMATIONS" TAB
-
 www.youtube.com###more-icon
 
 ! INFORMATION TAB LINKS CONTAINER
@@ -184,14 +180,11 @@ www.youtube.com###links-container
 ! INFORMATION TAB DETAILS CONTAINER
 www.youtube.com###details-container
 
-! MEMBERSHIP SUBSCRIPTION BUTTON
-www.youtube.com###sponsor-button
-
 ! REMOVE "COMMUNITY" TAB
-www.youtube.com##tp-yt-paper-tab.ytd-c4-tabbed-header-renderer.style-scope:has-text("Community")
+www.youtube.com##tp-yt-paper-tab:has-text(Community)
 
-! REMOVE STORE FROM BANNER
-www.youtube.com##.ytd-c4-tabbed-header-renderer.style-scope.container.yt-simple-endpoint
+! REMOVE LINKS FROM BANNER
+www.youtube.com###links-holder
 
 ! HIDE PAID SUBSCRIBERS
 youtube.com##.ytd-recognition-shelf-renderer
@@ -260,14 +253,14 @@ youtube.com##yt-live-chat-text-message-renderer:not(:has(#message:min-text-lengt
 !!!!             YT OTHERS             ||||
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-! HIDE HOME SCROLL CONTAINER GENRE SWITCHER
-www.youtube.com###header > .ytd-rich-grid-renderer.style-scope
+! HIDE "CHIPS"
+www.youtube.com##ytd-feed-filter-chip-bar-renderer
 
 ! HIDE TOP BAR VOCAL SEARCH
-www.youtube.com##.yt-spec-button-shape-next--icon-only-default.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--text.yt-spec-button-shape-next
+www.youtube.com###voice-search-button
 
 ! HIDE TOP BAR "CREATE" BUTTON
-www.youtube.com##.style-default.ytd-topbar-menu-button-renderer.style-scope
+www.youtube.com##.style-default.ytd-masthead.style-scope
 
 ! REMOVE HASHTAGS NEAR VIDEO PUBLISHING DATE
 youtube.com###info-container #info>a.yt-simple-endpoint[href^="/hashtag/"]
@@ -275,8 +268,8 @@ youtube.com###info-container #info>a.yt-simple-endpoint[href^="/hashtag/"]
 ! REMOVE COUNTRY CODE
 youtube.com##ytd-topbar-logo-renderer>#country-code
 
-! HIDE "INFO ON THOSE RESULTS"
-www.youtube.com##.yt-spec-button-shape-next--align-by-text.yt-spec-button-shape-next--icon-trailing.yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text.yt-spec-button-shape-next
+! HIDE "ABOUT THESE RESULTS"
+www.youtube.com##ytd-button-renderer:has-text(About these results)
 
 ! HIDE "MOMENTS IN THIS VIDEO" ON PREVIEW
 www.youtube.com###expandable-metadata > .ytd-video-renderer.style-scope
