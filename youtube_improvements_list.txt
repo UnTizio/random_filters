@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 02:27 30/05/2023
+! Last Modified: 02:46 30/05/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
