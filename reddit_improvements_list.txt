@@ -1,5 +1,5 @@
 ! Title: Byelzebub's Reddit Improvements List
-! Last Modified: 15:07 27/05/2023
+! Last Modified: 18:40 05/06/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Removes some stuff from Reddit.
 ! Works with: uBlock Origin
