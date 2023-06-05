@@ -111,3 +111,13 @@ www.reddit.com##._28vEaVlLWeas1CDiLuTCap._1EWxiIupuIjiExPQeK4Kud._3yh2bniLq7bYr4
 
 ! REMOVE SUBREDDIT PROFILE PREVIEW
 www.reddit.com##._39-woRduNuowN7G4JTW4I8
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!     REDDIT "YOUR PROFILE" VIEW    ||||
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! TROPHY CASE
+www.reddit.com##._2QeqBqfT5UbHBoViZUt-wX._1G4yU68P50vRZ4USXfaceV
+
+! AWARDS TABS
+www.reddit.com##a._1JNzvBgvzSnX27gUBKqqmJ:has-text(Awards)
