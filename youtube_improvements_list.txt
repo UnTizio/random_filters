@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 20:32 27/06/2023
+! Last Modified: 15:55 04/07/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -118,8 +118,11 @@ youtube.com##ytd-watch-next-secondary-results-renderer ytd-shelf-renderer
 ! SHOP PRODUCTS IN THIS VIDEO
 youtube.com##ytd-engagement-panel-section-list-renderer[target-id^="shopping_panel_for_entry_point"]
 
-! MOVIE RECCOMENDATIONS
+! MOVIE RECOMMENDATIONS
 youtube.com##ytd-compact-movie-renderer
+
+! MERCH SHELF
+youtube.com##ytd-merch-shelf-renderer
 
 !!! TITLE
 
@@ -282,9 +285,6 @@ youtube.com###expandable-metadata > .ytd-video-renderer.style-scope
 
 ! BADGE UNDER VIDEO (ES. "SUBTITLES, 4K" ETC.)
 youtube.com##.ytd-badge-supported-renderer.style-scope.badge-style-type-simple.badge
-
-! BLOCK ANIMATIONS
-||gstatic.com/youtube/img/promos/*$image
 
 ! REMOVE MEMBERSHIP IN SETTINGS
 youtube.com##ytd-settings-options-renderer.ytd-item-section-renderer.style-scope:has-text(Membership)
