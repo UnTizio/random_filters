@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 15:55 04/07/2023
+! Last Modified: 16:03 04/07/2023
 ! Expires: 7 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -87,7 +87,7 @@ youtube.com##ytd-download-button-renderer
 youtube.com##ytd-button-renderer:has(>yt-button-shape:has(>button.yt-spec-button-shape-next--disabled))
 
 ! HIDE MEMBERSHIP BUTTON
-www.youtube.com###sponsor-button
+youtube.com###sponsor-button
 
 ! UNDER DESCRIPTION CONTAINER GAME PLAYED
 youtube.com###always-shown
@@ -267,6 +267,12 @@ youtube.com##ytd-feed-filter-chip-bar-renderer
 
 ! HIDE TOP BAR VOCAL SEARCH
 youtube.com###voice-search-button
+
+! VOICE SEARCH RESPONSE
+||youtube.com/s/search/audio/*.mp3$media
+
+! BLOCK ANIMATIONS FROM BEING FETCHED
+||gstatic.com/youtube/img/promos/*$image
 
 ! HIDE TOP BAR "CREATE" BUTTON
 youtube.com##.style-default.ytd-masthead.style-scope
