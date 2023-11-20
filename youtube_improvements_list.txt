@@ -75,7 +75,6 @@ youtube.com##.ytp-cards-button-icon-default
 
 ! LIKE BUTTON ANIMATION
 ||gstatic.com/external_hosted/lottie/lottie_light.js$script,domain=youtube.com
-||gstatic.com/youtube/img/lottie/animated_like_icon/*.json$domain=youtube.com
 
 ! DOWNLOAD BUTTON
 youtube.com##ytd-download-button-renderer
