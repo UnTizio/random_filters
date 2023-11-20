@@ -60,7 +60,7 @@ youtube.com##.iv-branding
 youtube.com##.ytp-button.ytp-miniplayer-button
 
 ! AUTOPLAY BUTTON
-youtube.com##.ytp-autonav-toggle-button-container
+youtube.com##button.ytp-button:nth-of-type(7)
 
 ! REMOVE "AMBIENT MODE" IN PLAYER SETTINGS
 youtube.com##.ytp-menuitem:has-text(Ambient mode)
