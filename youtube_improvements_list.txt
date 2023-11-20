@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 23:10 20/11/2023
+! Last Modified: 23:16 20/11/2023
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -29,6 +29,9 @@ youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward
 
 ! REMOVE "REPORT HISTORY"
 youtube.com##ytd-guide-entry-renderer:has-text(Report history)
+
+! REMOVE "YOU >"
+youtube.com###header > .ytd-guide-collapsible-section-entry-renderer.style-scope
 
 ! REMOVE "HELP"
 youtube.com##ytd-guide-entry-renderer:has-text(Help)
