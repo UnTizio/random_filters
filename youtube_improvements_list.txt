@@ -312,5 +312,5 @@ youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
 !!!!           IMPROVEMENTS            ||||
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! https://www.reddit.com/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
-youtube.com##+js(nano-stb, resolve(*), *, 0.001)
-youtube.com##+js(nostif, resolve(*), *, 0.001)
+youtube.com##+js(nano-stb, *, 0.001)
+youtube.com##+js(nostif, *, 0.001)
