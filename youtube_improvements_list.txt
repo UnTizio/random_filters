@@ -71,10 +71,7 @@ youtube.com##.ytp-menuitem:has-text(Annotations)
 ! REMOVE "FROM *YOUTUBER*" ON TOP RIGHT
 youtube.com##.ytp-cards-button-icon-default
 
-!!! INTERACTION BUTTONS
-
-! LIKE BUTTON ANIMATION
-||gstatic.com/external_hosted/lottie/lottie_light.js$script,domain=youtube.com
+!!! INTERACTION BUTTON
 
 ! DOWNLOAD BUTTON
 youtube.com##ytd-download-button-renderer
