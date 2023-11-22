@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 20:27 21/11/2023
+! Last Modified: 16:19 22/11/2023
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -150,6 +150,11 @@ youtube.com###paid-comment-chip
 
 ! PAID COMMENT HIGHLIGHT
 youtube.com##ytd-comment-renderer#comment:style(--ytd-comment-paid-background-color: transparent !important;)
+
+!!! DESCRIPTION
+
+! HIDE TRANSCRIPT SECTION
+youtube.com##ytd-video-description-transcript-section-renderer.ytd-structured-description-content-renderer.style-scope
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!          YOUTUBE SHORTS           ||||
