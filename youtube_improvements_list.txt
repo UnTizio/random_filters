@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 16:19 22/11/2023
+! Last Modified: 22:22 24/11/2023
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -320,6 +320,4 @@ youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
 !!!!           IMPROVEMENTS            ||||
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! REMOVING THE ANTICHRIST (ARTIFICIAL DELAY) https://www.reddit.com/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
-youtube.com##+js(nano-stb, resolve(1), *, 0.001)
-youtube.com##+js(nostif, resolve(1), *, 0.001)
-youtube.com##+js(set, el.loadTime, 0.001)
+youtube.com##+js(nano-stb, resolve(1), 5000, 0.001)
