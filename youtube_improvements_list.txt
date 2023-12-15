@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 22:22 24/11/2023
+! Last Modified: 17:42 15/12/2023
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -315,6 +315,9 @@ youtube.com##ytd-miniplayer
 
 ! HIDE "COMMENTS ARE TURNED OFF" MESSAGE
 youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
+
+! HIDE "PRIMETIME MOVIES"
+youtube.com###content > .ytd-rich-section-renderer.style-scope
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !!!!           IMPROVEMENTS            ||||
