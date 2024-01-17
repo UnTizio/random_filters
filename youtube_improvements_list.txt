@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 21:19 17/01/2024
+! Last Modified: 21:56 17/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -226,7 +226,7 @@ youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-univers
 youtube.com##ytd-browse[page-subtype="home"] ytd-radio-renderer
 
 ! CHIPS
-youtube.com##ytd-browse[page-subtype="home"] #primary #header, #related #content
+youtube.com###chip-bar
 
 
 
