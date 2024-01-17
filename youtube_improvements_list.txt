@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 21:56 17/01/2024
+! Last Modified: 22:06 17/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -67,6 +67,10 @@ youtube.com##.ytp-autonav-toggle-button-container:upward(.ytp-button)
 
 ! REMOVE "FROM *YOUTUBER*" ON TOP RIGHT
 youtube.com##.ytp-cards-button-icon-default
+
+! REMOVE AMBIENT MODE
+youtube.com###player > #cinematics.ytd-watch-flexy
+youtube.com###player > #cinematics-container
 
 !!! INTERACTION BUTTON
 
