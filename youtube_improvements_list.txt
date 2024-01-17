@@ -13,7 +13,7 @@
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ! HIDE SIDEBAR FOOTER
-youtube.com###footer > .style-scope ytd-guide-renderer
+youtube.com###footer
 
 ! HIDE "DOWNLOADS"
 youtube.com##ytd-guide-downloads-entry-renderer
