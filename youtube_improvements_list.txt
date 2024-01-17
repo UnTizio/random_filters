@@ -1,16 +1,12 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 15:25 17/01/2023
+! Last Modified: 21:18 17/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!                                   YOUTUBE                                    !!!!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!         YOUTUBE SIDEBAR           ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!=====================================================
+! YOUTUBE SIDEBAR
+!=====================================================
 
 ! HIDE SIDEBAR GUIDE LINKS AND COPYRIGHT
 youtube.com###guide-links-primary
@@ -21,35 +17,37 @@ youtube.com###copyright
 youtube.com##ytd-guide-downloads-entry-renderer
 
 ! HIDE "EXPLORE"
-youtube.com##ytd-guide-section-renderer:has-text(Explore)
+youtube.com###sections > ytd-guide-section-renderer:has-text(Explore)
 
 ! HIDE "MORE FROM YOUTUBE"
-youtube.com##ytd-guide-section-renderer:has-text(More from YouTube)
+youtube.com###sections > ytd-guide-section-renderer:has-text(More from YouTube)
 
 ! HIDE SHORTS
 youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
-
-! REMOVE "REPORT HISTORY"
-youtube.com##ytd-guide-entry-renderer:has-text(Report history)
 
 ! REMOVE "YOU >"
 youtube.com###header > .ytd-guide-collapsible-section-entry-renderer.style-scope
 
 ! REMOVE "HELP"
-youtube.com##ytd-guide-entry-renderer:has-text(Help)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Help):upward(#endpoint)
 
 ! REMOVE "SEND FEEDBACK"
-youtube.com##ytd-guide-entry-renderer:has-text(Send feedback)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Send feedback):upward(#endpoint)
+
+! REMOVE "REPORT HISTORY"
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Report history):upward(#endpoint)
 
 ! HIDE "LIBRARY" BUTTON
-youtube.com##ytd-guide-entry-renderer:has-text(Library)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Library):upward(#endpoint)
 
 ! HIDE "HISTORY" BUTTON
-youtube.com##ytd-guide-entry-renderer:has-text(History)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(History):upward(#endpoint)
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!        YT VIDEO WATCHING          ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!=====================================================
+! YOUTUBE VIDEO WATCHING 
+!=====================================================
 
 !!! VIDEO PLAYER
 
@@ -62,16 +60,10 @@ youtube.com##.iv-branding
 !!! VIDEO PLAYER BUTTONS
 
 ! MINIPLAYER BUTTON
-youtube.com##.ytp-button.ytp-miniplayer-button
+youtube.com##.ytp-miniplayer-button
 
 ! AUTOPLAY BUTTON
-youtube.com##button.ytp-button:nth-of-type(7)
-
-! REMOVE "AMBIENT MODE" IN PLAYER SETTINGS
-youtube.com##.ytp-menuitem:has-text(Ambient mode)
-
-! REMOVE "ANNOTATIONS" IN PLAYER SETTINGS
-youtube.com##.ytp-menuitem:has-text(Annotations)
+youtube.com##.ytp-autonav-toggle-button-container:upward(.ytp-button)
 
 ! REMOVE "FROM *YOUTUBER*" ON TOP RIGHT
 youtube.com##.ytp-cards-button-icon-default
@@ -97,18 +89,15 @@ youtube.com###always-shown
 youtube.com###flexible-item-buttons
 
 ! HIDE "SHARE" BUTTON
-youtube.com##ytd-button-renderer:has-text(Share)
+youtube.com##yt-button-shape:has-text(Share)
 
 !!! SIDEBAR
-
-! SIDEBAR CHIPS
-youtube.com##yt-related-chip-cloud-renderer
 
 ! SIDEBAR FUNDRAISER
 youtube.com###donation-shelf
 
 ! OTHER SPONSORED VIDEOS
-youtube.com##ytd-engagement-panel-section-list-renderer[target-id="ytbc-related-shelf"]
+youtube.com###ytd-engagement-panel-section-list-renderer[target-id="ytbc-related-shelf"]
 
 ! ADS
 youtube.com##ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"]
@@ -161,12 +150,13 @@ youtube.com##ytd-comment-renderer#comment:style(--ytd-comment-paid-background-co
 
 !!! DESCRIPTION
 
-! HIDE TRANSCRIPT SECTION
-youtube.com##ytd-video-description-transcript-section-renderer.ytd-structured-description-content-renderer.style-scope
+! TRANSCRIPTION
+youtube.com##ytd-video-description-transcript-section-renderer
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!          YOUTUBE SHORTS           ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!=====================================================
+! YOUTUBE (BRAINROT) SHORTS
+!=====================================================
 
 ! HIDE SHORTS BUTTON
 youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
@@ -179,7 +169,7 @@ youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-v
 youtube.com##ytd-reel-shelf-renderer
 
 ! HIDE SHORTS TAB ON CHANNELS
-youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:nth-of-type(3):has-text(Shorts)
+youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Shorts)
 
 ! HIDE SUBSCRIBED YOUTUBERS SHORT
 youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
@@ -188,53 +178,61 @@ youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [o
 youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!         YT CHANNEL VIEWING        ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!=====================================================
+! YOUTUBE CHANNEL TAB
+!=====================================================
 
 ! REMOVE "INFORMATIONS" TAB
-youtube.com###more-icon
+youtube.com##ytd-browse[page-subtype="channels"] #more-icon
 
 ! INFORMATION TAB LINKS CONTAINER
-youtube.com###links-container
+youtube.com##ytd-browse[page-subtype="channels"] #links-container
 
 ! INFORMATION TAB DETAILS CONTAINER
-youtube.com###details-container
+youtube.com##ytd-browse[page-subtype="channels"] #details-container
 
 ! REMOVE "COMMUNITY" TAB
-youtube.com##tp-yt-paper-tab:has-text(Community)
+youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Community)
 
 ! REMOVE LINKS FROM BANNER
-youtube.com###links-holder
+youtube.com##ytd-browse[page-subtype="channels"] #links-holder
 
 ! HIDE PAID SUBSCRIBERS
-youtube.com##.ytd-recognition-shelf-renderer
+youtube.com##ytd-browse[page-subtype="channels"] .ytd-recognition-shelf-renderer
 
 ! HIDE FEATURED CHANNELS
-youtube.com##ytd-shelf-renderer:has(ytd-channel-renderer):has(.grid-subheader:not(:has(>#title-container[hidden])))
+youtube.com##ytd-browse[page-subtype="channels"] ytd-shelf-renderer:has(ytd-channel-renderer):has(.grid-subheader:not(:has(>#title-container[hidden])))
 
 ! CHANNEL MEMBER PROMPT POP-UP
-youtube.com##yt-bubble-hint-renderer > .yt-bubble-hint-renderer:has(.yt-formatted-string:has-text(Memebership))
+youtube.com##ytd-browse[page-subtype="channels"] yt-bubble-hint-renderer > .yt-bubble-hint-renderer:has(.yt-formatted-string:has-text(Memebership))
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!            YT SEARCH              ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!=====================================================
+! YOUTUBE SEARCH
+!=====================================================
 
 ! RECOMMENDATIONS
-youtube.com##:matches-path(/results) ytd-shelf-renderer
+youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-shelf-renderer
 
 ! PEOPLE ALSO WATCH
-youtube.com##:matches-path(/results) ytd-horizontal-card-list-renderer
+youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-horizontal-card-list-renderer
 
 ! FEATURED CHANNELS
-youtube.com##:matches-path(/results) ytd-universal-watch-card-renderer
+youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-universal-watch-card-renderer
 
 ! CHANNEL MIX
-youtube.com##ytd-radio-renderer
+youtube.com##ytd-browse[page-subtype="home"] ytd-radio-renderer
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!             YT EMBED              ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! CHIPS
+youtube.com##ytd-browse[page-subtype="home"] #primary #header, #related #content
+
+
+
+!=====================================================
+! YOUTUBE EMBED
+!=====================================================
 
 ! INFO PANEL
 youtube.com##.ytp-info-panel-preview
@@ -242,15 +240,17 @@ youtube.com##.ytp-info-panel-preview
 ! WATCH ON OVERLAY
 youtube.com##.ytp-impression-link
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!          YT LIVESTREAMS           ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+!=====================================================
+! YOUTUBE LIVESTREAMS
+!=====================================================
 
 ! SUPERCHAT / MEMBER TICKER
 youtube.com###ticker
 
 ! SUPERCHAT BUTTON
-youtube.com###product-picker
+youtube.com##product-picker
 
 ! SUPERCHATS
 youtube.com##yt-live-chat-paid-message-renderer
@@ -270,12 +270,14 @@ youtube.com##.emoji[data-emoji-id]
 ! EMOJI ONLY MESSAGES
 youtube.com##yt-live-chat-text-message-renderer:not(:has(#message:min-text-length(1)))
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!             YT OTHERS             ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-! HIDE "CHIPS"
-youtube.com##ytd-feed-filter-chip-bar-renderer
+
+!=====================================================
+! YOUTUBE OTHER STUFF
+!=====================================================
+
+! HIDE FEED CHIPS
+youtube.com##[page-subtype="home"] #primary #header, #related #content
 
 ! HIDE TOP BAR VOCAL SEARCH
 youtube.com###voice-search-button
@@ -293,10 +295,10 @@ youtube.com##.style-default.ytd-masthead.style-scope
 youtube.com###info-container #info>a.yt-simple-endpoint[href^="/hashtag/"]
 
 ! REMOVE COUNTRY CODE
-youtube.com##ytd-topbar-logo-renderer>#country-code
+youtube.com##ytd-topbar-logo-renderer > #country-code
 
 ! HIDE "ABOUT THESE RESULTS"
-youtube.com##ytd-button-renderer:has-text(About these results)
+youtube.com##yt-button-shape:has-text(About these results)
 
 ! HIDE "MOMENTS IN THIS VIDEO" ON PREVIEW
 youtube.com###expandable-metadata > .ytd-video-renderer.style-scope
@@ -304,18 +306,15 @@ youtube.com###expandable-metadata > .ytd-video-renderer.style-scope
 ! BADGE UNDER VIDEO (ES. "SUBTITLES, 4K" ETC.)
 youtube.com##.ytd-badge-supported-renderer.style-scope.badge-style-type-simple.badge
 
-! REMOVE MEMBERSHIP IN SETTINGS
-youtube.com##ytd-settings-options-renderer.ytd-item-section-renderer.style-scope:has-text(Membership)
-
 ! REMOVE LIVE CHAT IF NOT AVAILABLE FOR THE VIDEO
 youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text(Live chat replay is not available for this video.)
 youtube.com###show-hide-button
 
 ! HIDE "TRENDING" SHELF
-youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope:has-text(Trending)
+!youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope:has-text(Trending)
 
 ! HIDE "SIGN IN" STUFF
-youtube.com###buttons > ytd-button-renderer.ytd-masthead.style-scope > yt-button-shape:has-text(Sign in)
+youtube.com##ytd-button-renderer.ytd-masthead.style-scope:has-text(Sign in)
 youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
 
 ! REMOVE MINIPLAYER
@@ -327,11 +326,17 @@ youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
 ! HIDE "PRIMETIME MOVIES"
 youtube.com###content > .ytd-rich-section-renderer.style-scope
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!!!           IMPROVEMENTS            ||||
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-! REMOVING THE ANTICHRIST (ARTIFICIAL DELAY) https://www.reddit.com/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
+
+
+!=====================================================
+! YOUTUBE PERFORMANCE IMPROVEMENTS
+!=====================================================
+
+! REMOVING THE ANTICHRIST (ARTIFICIAL DELAY) https://libreddit.miaoute.net/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
 youtube.com##+js(nano-stb, resolve(1), 5000, 0.001)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_rsp_cl, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.ab_pl_man, false)
 ||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com
+
+! REDUCE ANIMATIONS
+||youtube.com/s/desktop/*/jsbin/web-animations-next-lite.min.vflset/web-animations-next-lite.min.js$script
