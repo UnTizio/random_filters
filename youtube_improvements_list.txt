@@ -1,7 +1,7 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 17:34 18/01/2024
+! Last Modified: 18:57 18/01/2024
 ! Expires: 1 Days (Update Frequency)
-! Description: Improves YouTube's UI making it less obnoxious.
+! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
 
 !=====================================================
@@ -347,6 +347,7 @@ youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.ab_pl_man, false)
 ! REDUCE ANIMATIONS (ROLLING VIEWS, LIKES, PAUSING / UNPAUSING)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_web_ketchup_hero_animation, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_web_poster_hover_animation, false)
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.desktop_animate_miniplayer, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.smartimation_background, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_animated_actions, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_animated_like, false)
@@ -359,9 +360,10 @@ youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.deprecate_pair_servlet_enabled
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_always_load_chat_support, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.deprecate_csi_has_info, false)
 
-! PREFETCHING SHORTS
+! PREFETCHING 
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_enable_shorts_prefetch_in_sequence, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_enable_shorts_response_chunking, false)
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_prefetch, false)
 
 ! TRACKING
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_loggingcontext_trackingparams, false)
