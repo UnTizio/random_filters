@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 22:37 17/01/2024
+! Last Modified: 17:34 18/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improves YouTube's UI making it less obnoxious.
 ! Works with: uBlock Origin.
@@ -336,15 +336,15 @@ youtube.com###content > .ytd-rich-section-renderer.style-scope
 ! YOUTUBE PERFORMANCE IMPROVEMENTS
 !=====================================================
 
-! REMOVING THE ANTICHRIST (ARTIFICIAL DELAY) https://libreddit.miaoute.net/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
+! "DON'T BE EVIL" (ARTIFICIAL DELAY) https://libreddit.miaoute.net/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
 youtube.com##+js(nano-stb, resolve(1), 5000, 0.001)
-youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_rsp_cl, false)
-youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.ab_pl_man, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_em_rsp, false)
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_rsp_cl, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_ab_rp_int, false)
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.ab_pl_man, false)
 ||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com
 
-! REDUCE ANIMATIONS (ROLLING VIEWS, LIKES)
+! REDUCE ANIMATIONS (ROLLING VIEWS, LIKES, PAUSING / UNPAUSING)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_web_ketchup_hero_animation, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_web_poster_hover_animation, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.smartimation_background, false)
@@ -354,8 +354,15 @@ youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_animated_like, false)
 ||youtube.com/s/desktop/*/jsbin/scheduler.vflset/scheduler.js$script,domain=youtube.com
 ||youtube.com/youtubei/v1/updated_metadata$domain=youtube.com
 
-! OTHER
+! UNLOAD STUFF
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.deprecate_pair_servlet_enabled, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_always_load_chat_support, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.deprecate_csi_has_info, false)
+
+! PREFETCHING SHORTS
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_enable_shorts_prefetch_in_sequence, false)
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_enable_shorts_response_chunking, false)
+
+! TRACKING
+youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_loggingcontext_trackingparams, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.searchbox_reporting, false)
