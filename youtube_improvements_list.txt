@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 20:35 25/01/2024
+! Last Modified: 00:55 26/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -9,42 +9,43 @@
 ! YOUTUBE SIDEBAR
 !=====================================================
 
-! HIDE SIDEBAR GUIDE LINKS AND COPYRIGHT
-youtube.com###guide-links-primary
-youtube.com###guide-links-secondary
-youtube.com###copyright
+! REMOVE SIDEBAR GUIDE LINKS AND COPYRIGHT
+youtube.com###guide-links-primary:remove()
+youtube.com###guide-links-secondary:remove()
+youtube.com###copyright:remove()
 
-! HIDE "DOWNLOADS"
-youtube.com##ytd-guide-downloads-entry-renderer
+! REMOVE "DOWNLOADS"
+youtube.com##ytd-guide-downloads-entry-renderer:remove()
 
-! HIDE "EXPLORE"
-youtube.com###sections > ytd-guide-section-renderer:has-text(Explore)
+! REMOVE "EXPLORE"
+youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:has-text(Explore):remove()
 
-! HIDE "MORE FROM YOUTUBE"
-youtube.com###sections > ytd-guide-section-renderer:has-text(More from YouTube)
+! REMOVE "MORE FROM YOUTUBE"
+youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:has-text(More from YouTube):remove()
 
-! HIDE SHORTS
-youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer)
+! REMOVE SHORTS
+youtube.com###related ytd-compact-video-renderer [overlay-style="SHORTS"]:upward(ytd-compact-video-renderer):remove()
 
 ! REMOVE "YOU >"
-youtube.com###header > .ytd-guide-collapsible-section-entry-renderer.style-scope
+youtube.com###header-entry:remove()
 
 ! REMOVE "HELP"
-youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Help):upward(#endpoint)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Help):upward(#endpoint):remove()
 
 ! REMOVE "SEND FEEDBACK"
-youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Send feedback):upward(#endpoint)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Send feedback):upward(#endpoint):remove()
 
 ! REMOVE "REPORT HISTORY"
-youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Report history):upward(#endpoint)
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Report history):upward(#endpoint):remove()
 
-! HIDE "LIBRARY" BUTTON
-youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Library):upward(#endpoint)
+! REMOVE "LIBRARY" BUTTON
+youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Library):upward(#endpoint):remove()
 
-! HIDE "HISTORY" BUTTON
-youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(History):upward(#endpoint)
+! REMOVE "HISTORY" BUTTON
+youtube.com##.ytd-guide-entry-renderer.style-scope[href^="/feed/history"]:remove()
 
-
+! REMOVE "BROWSE CHANNELS" UNDER SUBSCRIPTIONS LIST WHEN EXPANDED
+youtube.com##.ytd-guide-entry-renderer.style-scope[href^="/feed/guide_builder"]:remove()
 
 !=====================================================
 ! YOUTUBE VIDEO WATCHING 
@@ -54,107 +55,110 @@ youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(History):upward(#end
 ! VIDEO PLAYER
 
 ! ANNOTATIONS
-youtube.com##.ytp-ce-element
+youtube.com##.ytp-ce-element:remove()
 
 ! WATERMARK
-youtube.com##.iv-branding
+youtube.com##.iv-branding:remove()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! VIDEO PLAYER BUTTONS
 
 ! MINIPLAYER BUTTON
-youtube.com##.ytp-miniplayer-button
+youtube.com##.ytp-miniplayer-button:remove()
 
 ! AUTOPLAY BUTTON
-youtube.com##.ytp-autonav-toggle-button-container:upward(.ytp-button)
+youtube.com##.ytp-autonav-toggle-button-container:upward(.ytp-button):remove()
 
 ! REMOVE "FROM *YOUTUBER*" ON TOP RIGHT
-youtube.com##.ytp-cards-button-icon-default
+youtube.com##.ytp-cards-button-icon-default:remove()
 
 ! REMOVE AMBIENT MODE
-youtube.com###player > #cinematics.ytd-watch-flexy
-youtube.com###player > #cinematics-container
+youtube.com###player > #cinematics.ytd-watch-flexy:remove()
+youtube.com###player > #cinematics-container:remove()
+
+! REMOVE ENHANCED BITRATE QUALITY SELECTION
+youtube.com##.ytp-quality-menu .ytp-menuitem:has(.ytp-premium-label):remove()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! INTERACTION BUTTON
 
 ! DOWNLOAD BUTTON
-youtube.com##ytd-download-button-renderer
+youtube.com##ytd-download-button-renderer:remove()
 
 ! DOWNLOAD WORKER
 ||youtube.com/s/player/*/player_ias.vflset/*/offline.js$script
 
 ! HIDE DISABLED BUTTONS (Download for non-premium, Save for YT Kids)
-youtube.com##ytd-button-renderer:has(>yt-button-shape:has(>button.yt-spec-button-shape-next--disabled))
+youtube.com##ytd-button-renderer:has(>yt-button-shape:has(>button.yt-spec-button-shape-next--disabled)):remove()
 
 ! HIDE MEMBERSHIP BUTTON
-youtube.com###sponsor-button
+youtube.com###sponsor-button:remove()
 
 ! UNDER DESCRIPTION CONTAINER GAME PLAYED
-youtube.com###always-shown
+youtube.com###always-shown:remove()
 
 ! HIDE "THANKS" AND "CLIP" BUTTONS
-youtube.com###flexible-item-buttons
+youtube.com###flexible-item-buttons:remove()
 
 ! HIDE "SHARE" BUTTON
-youtube.com##yt-button-shape:has-text(Share)
+youtube.com##yt-button-shape:has-text(Share):remove()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! SIDEBAR
 
 ! SIDEBAR FUNDRAISER
-youtube.com###donation-shelf
+youtube.com###donation-shelf:remove()
 
 ! OTHER SPONSORED VIDEOS
-youtube.com###ytd-engagement-panel-section-list-renderer[target-id="ytbc-related-shelf"]
+youtube.com###ytd-engagement-panel-section-list-renderer[target-id="ytbc-related-shelf"]:remove()
 
 ! ADS
-youtube.com##ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"]
+youtube.com##ytd-engagement-panel-section-list-renderer[target-id="engagement-panel-ads"]:remove()
 
 ! SHELVES IN WATCH-NEXT RECOMMENDATIONS
-youtube.com##ytd-watch-next-secondary-results-renderer ytd-shelf-renderer
+youtube.com##ytd-watch-next-secondary-results-renderer ytd-shelf-renderer:remove()
 
 ! SHOP PRODUCTS IN THIS VIDEO
-youtube.com##ytd-engagement-panel-section-list-renderer[target-id^="shopping_panel_for_entry_point"]
+youtube.com##ytd-engagement-panel-section-list-renderer[target-id^="shopping_panel_for_entry_point"]:remove()
 
 ! MOVIE RECOMMENDATIONS
-youtube.com##ytd-compact-movie-renderer
+youtube.com##ytd-compact-movie-renderer:remove()
 
 ! MERCH SHELF
-youtube.com##ytd-merch-shelf-renderer
+youtube.com##ytd-merch-shelf-renderer:remove()
 
-! Remove Premiere chat if not available
-youtube.com###chat:has-text(Chat Replay is disabled for this Premiere.)
+! REMOVE PREMIERE CHAT IF NOT AVAILABLE
+youtube.com###chat:has-text(Chat Replay is disabled for this Premiere.):remove()
 
-! Remove "Watch YT Originals ad-free"
-youtube.com###offer-module
+! REMOVE "Watch YT Originals ad-free"
+youtube.com###offer-module:remove()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! TITLE
 
 ! CLARIFY BOX
-youtube.com###clarify-box
+youtube.com###clarify-box:remove()
 
 ! "TRENDING FOR" OR HASHTAGS IN TITLE
-youtube.com###title>#super-title
+youtube.com###title>#super-title:remove()
 
 ! COLLECTION BADGE
-youtube.com##.badge.badge-style-type-collection
+youtube.com##.badge.badge-style-type-collection:remove()
 
 ! SUPERTITLE FOR LOCATION
-youtube.com###info-container>#info>a.yt-simple-endpoint[style-target="bold"]
+youtube.com###info-container>#info>a.yt-simple-endpoint[style-target="bold"]:remove()
 
 ! LOCATION PIN
-youtube.com##a:has(>yt-icon[icon="yt-icons:location_pin"])
+youtube.com##a:has(>yt-icon[icon="yt-icons:location_pin"]):remove()
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! COMMENTS
 
 ! CHANNEL MEMBER BADGE
-youtube.com##span#sponsor-comment-badge
+youtube.com##span#sponsor-comment-badge:remove()
 
 ! PAID COMMENT BADGE
-youtube.com###paid-comment-chip
+youtube.com###paid-comment-chip:remove()
 
 ! PAID COMMENT HIGHLIGHT
 youtube.com##ytd-comment-renderer#comment:style(--ytd-comment-paid-background-color: transparent !important;)
@@ -163,10 +167,10 @@ youtube.com##ytd-comment-renderer#comment:style(--ytd-comment-paid-background-co
 ! DESCRIPTION
 
 ! TRANSCRIPTION
-youtube.com##ytd-video-description-transcript-section-renderer
+youtube.com##ytd-video-description-transcript-section-renderer:remove()
 
 ! HASHTAGS
-youtube.com##a[href^="/hashtag/"]
+youtube.com##a[href^="/hashtag/"]:remove()
 
 
 
@@ -175,23 +179,23 @@ youtube.com##a[href^="/hashtag/"]
 !=====================================================
 
 ! HIDE SHORTS BUTTON
-youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
+youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]:remove()
 
 ! HIDE SHORTS
 youtube.com##[is-shorts]
-youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer)
+youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer):remove()
 
 ! HIDE SHORTS SECTIONS ON SEARCH AND CHANNELS
-youtube.com##ytd-reel-shelf-renderer
+youtube.com##ytd-reel-shelf-renderer:remove()
 
 ! HIDE SHORTS TAB ON CHANNELS
-youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Shorts)
+youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Shorts):remove()
 
 ! HIDE SUBSCRIBED YOUTUBERS SHORT
-youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer):remove()
 
 ! HIDE SUBSCRIBED YOUTUBERS SHORTS LIST
-youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
+youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer):remove()
 
 
 
@@ -200,28 +204,28 @@ youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overla
 !=====================================================
 
 ! REMOVE "INFORMATIONS" TAB
-youtube.com##ytd-browse[page-subtype="channels"] #more-icon
+youtube.com##ytd-browse[page-subtype="channels"] #more-icon:remove()
 
 ! INFORMATION TAB LINKS CONTAINER
-youtube.com##ytd-browse[page-subtype="channels"] #links-container
+youtube.com##ytd-browse[page-subtype="channels"] #links-container:remove()
 
 ! INFORMATION TAB DETAILS CONTAINER
-youtube.com##ytd-browse[page-subtype="channels"] #details-container
+youtube.com##ytd-browse[page-subtype="channels"] #details-container:remove()
 
 ! REMOVE "COMMUNITY" TAB
-youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Community)
+youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Community):remove()
 
 ! REMOVE LINKS FROM BANNER
-youtube.com##ytd-browse[page-subtype="channels"] #links-holder
+youtube.com##ytd-browse[page-subtype="channels"] #links-holder:remove()
 
 ! HIDE PAID SUBSCRIBERS
-youtube.com##ytd-browse[page-subtype="channels"] .ytd-recognition-shelf-renderer
+youtube.com##ytd-browse[page-subtype="channels"] .ytd-recognition-shelf-renderer:remove()
 
 ! HIDE FEATURED CHANNELS
-youtube.com##ytd-browse[page-subtype="channels"] ytd-shelf-renderer:has(ytd-channel-renderer):has(.grid-subheader:not(:has(>#title-container[hidden])))
+youtube.com##ytd-browse[page-subtype="channels"] ytd-shelf-renderer:has(ytd-channel-renderer):has(.grid-subheader:not(:has(>#title-container[hidden]))):remove()
 
 ! CHANNEL MEMBER PROMPT POP-UP
-youtube.com##ytd-browse[page-subtype="channels"] yt-bubble-hint-renderer > .yt-bubble-hint-renderer:has(.yt-formatted-string:has-text(Memebership))
+youtube.com##ytd-browse[page-subtype="channels"] yt-bubble-hint-renderer > .yt-bubble-hint-renderer:has(.yt-formatted-string:has-text(Memebership)):remove()
 
 
 
@@ -230,19 +234,19 @@ youtube.com##ytd-browse[page-subtype="channels"] yt-bubble-hint-renderer > .yt-b
 !=====================================================
 
 ! RECOMMENDATIONS
-youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-shelf-renderer
+youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-shelf-renderer:remove()
 
 ! PEOPLE ALSO WATCH
-youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-horizontal-card-list-renderer
+youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-horizontal-card-list-renderer:remove()
 
 ! FEATURED CHANNELS
-youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-universal-watch-card-renderer
+youtube.com##ytd-browse[page-subtype="home"] :matches-path(/results) ytd-universal-watch-card-renderer:remove()
 
 ! CHANNEL MIX
-youtube.com##ytd-browse[page-subtype="home"] ytd-radio-renderer
+youtube.com##ytd-browse[page-subtype="home"] ytd-radio-renderer:remove()
 
 ! CHIPS
-youtube.com###chip-bar
+youtube.com###chip-bar:remove()
 
 
 
@@ -251,10 +255,10 @@ youtube.com###chip-bar
 !=====================================================
 
 ! INFO PANEL
-youtube.com##.ytp-info-panel-preview
+youtube.com##.ytp-info-panel-preview:remove()
 
 ! WATCH ON OVERLAY
-youtube.com##.ytp-impression-link
+youtube.com##.ytp-impression-link:remove()
 
 
 
@@ -263,28 +267,28 @@ youtube.com##.ytp-impression-link
 !=====================================================
 
 ! SUPERCHAT / MEMBER TICKER
-youtube.com###ticker
+youtube.com###ticker:remove()
 
 ! SUPERCHAT BUTTON
-youtube.com##product-picker
+youtube.com##product-picker:remove()
 
 ! SUPERCHATS
-youtube.com##yt-live-chat-paid-message-renderer
+youtube.com##yt-live-chat-paid-message-renderer:remove()
 
 ! MEMBERSHIPS
-youtube.com##yt-live-chat-membership-item-renderer
+youtube.com##yt-live-chat-membership-item-renderer:remove()
 
 ! PAID BADGES
-youtube.com##yt-live-chat-paid-sticker-renderer
+youtube.com##yt-live-chat-paid-sticker-renderer:remove()
 
 ! CHAT MEMBER BADGE
-youtube.com##yt-live-chat-author-badge-renderer[type=member]
+youtube.com##yt-live-chat-author-badge-renderer[type=member]:remove()
 
 ! CUSTOM EMOJIS
-youtube.com##.emoji[data-emoji-id]
+youtube.com##.emoji[data-emoji-id]:remove()
 
 ! EMOJI ONLY MESSAGES
-youtube.com##yt-live-chat-text-message-renderer:not(:has(#message:min-text-length(1)))
+youtube.com##yt-live-chat-text-message-renderer:not(:has(#message:min-text-length(1))):remove()
 
 
 
@@ -292,53 +296,59 @@ youtube.com##yt-live-chat-text-message-renderer:not(:has(#message:min-text-lengt
 ! YOUTUBE OTHER STUFF
 !=====================================================
 
+! YOUTUBE PREMIUM AD BANNER
+youtube.com###masthead-ad:remove()
+
+! ENHANCED BITRATE WARNING
+youtube.com##tp-yt-paper-dialog.ytd-popup-container.style-scope:remove()
+
 ! HIDE FEED CHIPS
-youtube.com##[page-subtype="home"] #primary #header, #related #content
+youtube.com##[page-subtype="home"] #primary #header, #related #content:remove()
 
 ! HIDE TOP BAR VOCAL SEARCH
-youtube.com###voice-search-button
+youtube.com###voice-search-button:remove()
 
 ! VOICE SEARCH RESPONSE
 ||youtube.com/s/search/audio/*.mp3$media
 
 ! HIDE TOP BAR "CREATE" BUTTON
-youtube.com##.style-default.ytd-masthead.style-scope
+youtube.com##.style-default.ytd-masthead.style-scope:remove()
 
 ! REMOVE HASHTAGS NEAR VIDEO PUBLISHING DATE
-youtube.com###info-container #info > a.yt-simple-endpoint[href^="/hashtag/"]
+youtube.com###info-container #info > a.yt-simple-endpoint[href^="/hashtag/"]:remove()
 
 ! REMOVE COUNTRY CODE
-youtube.com##ytd-topbar-logo-renderer > #country-code
+youtube.com##ytd-topbar-logo-renderer > #country-code:remove()
 
-! HIDE "ABOUT THESE RESULTS"
-youtube.com##yt-button-shape:has-text(About these results)
+! REMOVE "ABOUT THESE RESULTS"
+youtube.com##yt-button-shape:has-text(About these results):remove()
 
-! HIDE "MOMENTS IN THIS VIDEO" ON PREVIEW
-youtube.com###expandable-metadata > .ytd-video-renderer.style-scope
+! REMOVE "MOMENTS IN THIS VIDEO" ON PREVIEW
+youtube.com###expandable-metadata > .ytd-video-renderer.style-scope:remove()
 
 ! BADGE UNDER VIDEO (ES. "SUBTITLES, 4K" ETC.)
-youtube.com##.ytd-badge-supported-renderer.style-scope.badge-style-type-simple.badge
+youtube.com##.ytd-badge-supported-renderer.style-scope.badge-style-type-simple.badge:remove()
 
 ! REMOVE LIVE CHAT IF NOT AVAILABLE FOR THE VIDEO
-youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text(Live chat replay is not available for this video.)
-youtube.com###show-hide-button
+youtube.com##ytd-message-renderer.ytd-live-chat-frame.style-scope:has-text(Live chat replay is not available for this video.):remove()
+youtube.com###show-hide-button:remove()
 
-! HIDE "TRENDING" SHELF
-!youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope:has-text(Trending)
+! REMOVE "TRENDING" SHELF
+youtube.com##.ytd-rich-section-renderer.style-scope > .ytd-rich-shelf-renderer.style-scope:has-text(Trending):remove()
 
-! HIDE "SIGN IN" STUFF
-youtube.com##ytd-button-renderer.ytd-masthead.style-scope:has-text(Sign in)
-youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
+! REMOVE "SIGN IN" STUFF
+youtube.com##ytd-button-renderer.ytd-masthead.style-scope:has-text(Sign in):remove()
+youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope:remove()
 
 ! REMOVE MINIPLAYER
-youtube.com##ytd-miniplayer
-||youtube.com/s/player/*/player_ias.vflset/*/miniplayer.js
+youtube.com##ytd-miniplayer:remove()
+||youtube.com/s/player/*/player_ias.vflset/*/miniplayer.js$script,domain=www.youtube.com
 
-! HIDE "COMMENTS ARE TURNED OFF" MESSAGE
-youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
+! REMOVE "COMMENTS ARE TURNED OFF" MESSAGE
+youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more):remove()
 
-! HIDE "PRIMETIME MOVIES"
-youtube.com###content > .ytd-rich-section-renderer.style-scope
+! REMOVE "PRIMETIME MOVIES"
+youtube.com###content > .ytd-rich-section-renderer.style-scope:remove()
 
 
 
