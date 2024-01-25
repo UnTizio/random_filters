@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 20:08 25/01/2024
+! Last Modified: 20:28 25/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -290,14 +290,14 @@ youtube.com###voice-search-button
 ! VOICE SEARCH RESPONSE
 ||youtube.com/s/search/audio/*.mp3$media
 
-! BLOCK ANIMATIONS FROM BEING FETCHED
-||gstatic.com/youtube/img/promos/*$image
-
 ! HIDE TOP BAR "CREATE" BUTTON
 youtube.com##.style-default.ytd-masthead.style-scope
 
 ! REMOVE HASHTAGS NEAR VIDEO PUBLISHING DATE
-youtube.com###info-container #info>a.yt-simple-endpoint[href^="/hashtag/"]
+youtube.com###info-container #info > a.yt-simple-endpoint[href^="/hashtag/"]
+
+! REMOVE HASHTAGS IN DESCRIPTION
+youtube.com##.yt-core-attributed-string__link--call-to-action-color.yt-core-attributed-string__link--display-type.yt-core-attributed-string__link[href^="/hashtag/"]
 
 ! REMOVE COUNTRY CODE
 youtube.com##ytd-topbar-logo-renderer > #country-code
@@ -366,6 +366,8 @@ youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.deprecate_csi_has_info, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_enable_shorts_prefetch_in_sequence, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_enable_shorts_response_chunking, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.kevlar_prefetch, false)
+! ANIMATIONS FETCHING
+||gstatic.com/youtube/img/promos/*$image
 
 ! TRACKING
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_loggingcontext_trackingparams, false)
