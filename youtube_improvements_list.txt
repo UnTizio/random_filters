@@ -1,5 +1,5 @@
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 18:57 18/01/2024
+! Last Modified: 17:01 25/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -323,6 +323,7 @@ youtube.com##ytd-guide-signin-promo-renderer.ytd-guide-renderer.style-scope
 
 ! REMOVE MINIPLAYER
 youtube.com##ytd-miniplayer
+||youtube.com/s/player/*/player_ias.vflset/*/miniplayer.js
 
 ! HIDE "COMMENTS ARE TURNED OFF" MESSAGE
 youtube.com##ytd-message-renderer:has-text(Comments are turned off. Learn more)
