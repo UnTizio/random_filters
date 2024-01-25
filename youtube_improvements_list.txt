@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 20:28 25/01/2024
+! Last Modified: 20:35 25/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -50,7 +50,8 @@ youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(History):upward(#end
 ! YOUTUBE VIDEO WATCHING 
 !=====================================================
 
-!!! VIDEO PLAYER
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIDEO PLAYER
 
 ! ANNOTATIONS
 youtube.com##.ytp-ce-element
@@ -58,7 +59,8 @@ youtube.com##.ytp-ce-element
 ! WATERMARK
 youtube.com##.iv-branding
 
-!!! VIDEO PLAYER BUTTONS
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! VIDEO PLAYER BUTTONS
 
 ! MINIPLAYER BUTTON
 youtube.com##.ytp-miniplayer-button
@@ -73,7 +75,8 @@ youtube.com##.ytp-cards-button-icon-default
 youtube.com###player > #cinematics.ytd-watch-flexy
 youtube.com###player > #cinematics-container
 
-!!! INTERACTION BUTTON
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! INTERACTION BUTTON
 
 ! DOWNLOAD BUTTON
 youtube.com##ytd-download-button-renderer
@@ -96,7 +99,8 @@ youtube.com###flexible-item-buttons
 ! HIDE "SHARE" BUTTON
 youtube.com##yt-button-shape:has-text(Share)
 
-!!! SIDEBAR
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! SIDEBAR
 
 ! SIDEBAR FUNDRAISER
 youtube.com###donation-shelf
@@ -125,7 +129,8 @@ youtube.com###chat:has-text(Chat Replay is disabled for this Premiere.)
 ! Remove "Watch YT Originals ad-free"
 youtube.com###offer-module
 
-!!! TITLE
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! TITLE
 
 ! CLARIFY BOX
 youtube.com###clarify-box
@@ -142,7 +147,8 @@ youtube.com###info-container>#info>a.yt-simple-endpoint[style-target="bold"]
 ! LOCATION PIN
 youtube.com##a:has(>yt-icon[icon="yt-icons:location_pin"])
 
-!!! COMMENTS
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! COMMENTS
 
 ! CHANNEL MEMBER BADGE
 youtube.com##span#sponsor-comment-badge
@@ -153,10 +159,15 @@ youtube.com###paid-comment-chip
 ! PAID COMMENT HIGHLIGHT
 youtube.com##ytd-comment-renderer#comment:style(--ytd-comment-paid-background-color: transparent !important;)
 
-!!! DESCRIPTION
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+! DESCRIPTION
 
 ! TRANSCRIPTION
 youtube.com##ytd-video-description-transcript-section-renderer
+
+! HASHTAGS
+youtube.com##a[href^="/hashtag/"]
+
 
 
 !=====================================================
@@ -295,9 +306,6 @@ youtube.com##.style-default.ytd-masthead.style-scope
 
 ! REMOVE HASHTAGS NEAR VIDEO PUBLISHING DATE
 youtube.com###info-container #info > a.yt-simple-endpoint[href^="/hashtag/"]
-
-! REMOVE HASHTAGS IN DESCRIPTION
-youtube.com##.yt-core-attributed-string__link--call-to-action-color.yt-core-attributed-string__link--display-type.yt-core-attributed-string__link[href^="/hashtag/"]
 
 ! REMOVE COUNTRY CODE
 youtube.com##ytd-topbar-logo-renderer > #country-code
