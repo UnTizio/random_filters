@@ -1,5 +1,6 @@
+[uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 17:01 25/01/2024
+! Last Modified: 20:08 25/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
