@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 01:44 27/01/2024
+! Last Modified: 23:41 28/01/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -178,24 +178,32 @@ youtube.com##a[href^="/hashtag/"]
 ! YOUTUBE (BRAINROT) SHORTS
 !=====================================================
 
-! HIDE SHORTS BUTTON
-youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
-
-! HIDE SHORTS
+! HIDE THE "SHORTS" SECTION
 youtube.com##[is-shorts]
-youtube.com##ytd-search ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-video-renderer)
 
-! HIDE SHORTS SECTIONS ON SEARCH AND CHANNELS
-youtube.com##ytd-reel-shelf-renderer
+! HIDE THE SHORTS BUTTON
+www.youtube.com###guide [title="Shorts"], .ytd-mini-guide-entry-renderer[title="Shorts"]
 
-! HIDE SHORTS TAB ON CHANNELS
-youtube.com##ytd-browse[page-subtype="channels"] [role="tab"]:has-text(Shorts)
+! HIDE SHORTS IN SEARCH
+www.youtube.com##ytd-search ytd-video-renderer:has([overlay-style="SHORTS"])
 
-! HIDE SUBSCRIBED YOUTUBERS SHORT
-youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
+! HIDE SHORTS SECTIONS IN SEARCH, CHANNELS, SIDEBAR OR BELOW THE PLAYER
+www.youtube.com##ytd-reel-shelf-renderer
 
-! HIDE SUBSCRIBED YOUTUBERS SHORTS LIST
-youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)
+! HIDE SHORTS TAB IN CHANNEL VIEWING
+www.youtube.com##[tab-title="Shorts"]
+
+! HIDE SHORTS IN SUBSCRIPTIONS - GRID VIEW
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has([overlay-style="SHORTS"])
+
+! HIDE SHORTS IN SUBSCRIPTIONS - LIST VIEW
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer:has([overlay-style="SHORTS"])
+
+! HIDE SHORTS IN SUBSCRIPTIONS - NEW LAYOUT
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-rich-item-renderer:has([overlay-style="SHORTS"])
+
+! SIDEBAR
+www.youtube.com###related ytd-compact-video-renderer:has([overlay-style="SHORTS"])
 
 
 
