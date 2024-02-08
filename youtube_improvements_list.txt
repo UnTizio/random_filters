@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 20:29 02/02/2024
+! Last Modified: 17:09 08/02/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -40,9 +40,6 @@ youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Report history):upwa
 
 ! REMOVE "LIBRARY" BUTTON
 youtube.com##.ytd-guide-entry-renderer.style-scope:has-text(Library):upward(#endpoint)
-
-! REMOVE "HISTORY" BUTTON
-youtube.com##.ytd-guide-entry-renderer.style-scope[href^="/feed/history"]
 
 ! REMOVE "BROWSE CHANNELS" UNDER SUBSCRIPTIONS LIST WHEN EXPANDED
 youtube.com##.ytd-guide-entry-renderer.style-scope[href^="/feed/guide_builder"]
