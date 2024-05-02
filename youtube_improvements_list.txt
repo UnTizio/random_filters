@@ -103,7 +103,7 @@ youtube.com###always-shown
 youtube.com###flexible-item-buttons
 
 ! HIDE "SHARE" BUTTON
-youtube.com##yt-button-view-model.ytd-menu-renderer.style-scope
+!youtube.com##yt-button-view-model.ytd-menu-renderer.style-scope
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! SIDEBAR
