@@ -1,0 +1,103 @@
+[uBlock Origin]
+! Title: Unsafe Piracy Sites Blocker (UPSB)
+! Last Modified: 18:04 26/05/2024
+! Expires: 1 Days (Update Frequency)
+! Description: Blocks untrusted / unsafe sites for piracy.
+! Works with: uBlock Origin.
+
+! Unsafe software
+||en.softonic.^$all
+||bittorrent.^$all
+||crackshash.^$all
+||vfxdownloads.net
+||crackedfully.com
+||portable4pc.com
+||portable4pc.com
+||vfxdownload.com
+||vstorrent.^$all
+||allpcworld.com
+||app-valley.vip
+||utorrent.^$all
+||getintopc.com
+||frostwire.com
+||bitcomet.com
+||sadeempc.com
+||bitlord.com
+||karanpc.com
+||ftuapps.dev
+||haxnode.net
+||kolompc.com
+||s0ft4pc.com
+||tutubox.io
+||haxpc.net
+||yasdl.com
+
+! Unsafe major sites
+||thepiratebay.^$all
+||1337x.vpnonly.site
+||kickasstorrents.to
+||torrentlite.org
+||1377x.^$all
+
+! Fake RARBG
+||therarbg.com
+||rarbg.club
+||rargb.to
+
+! Fake Z-Library
+||twitter.com/ZLib_Official
+||twitter.com/thezlibrary
+||z-library-proxy.com
+||zlibrary-global.com
+||zlib-official.com
+||z-library.live
+||z-library.wiki
+||z-library.blog
+||z-library.help
+||zlibrary.lol
+||z-lib.^$all
+||zlibrary.to
+||zlibrary.is
+||zlibis.com
+||zlib.is
+||zlib.to
+
+! Unsafe games
+||steamunlocked.^$all
+||empresstorrents.com
+||blackboxrepacke.com
+||oceansofgamess.com
+||elamigos-games.net
+||steam-repacks.com
+||gamefabrique.com
+||gamestorrents.fm
+||descargagame.com
+||elamigosweb.com
+||apunkagames.com
+||crotorrents.com
+||gogunlocked.com
+||nexus-games.net
+||nosteamgames.ro
+||wifi4games.com
+||igg-games.com
+||gamepciso.com
+||coolrom.^$all
+||aimhaven.com
+||crohasit.net
+||game3rb.com
+||qoob.name
+
+! Minecraft
+||tlauncher.^$all
+||klauncher.^$all
+
+! FitGirl
+||fitgirl-repacks.^$all,domain=~fitgirl-repacks.site
+||fitgirl-repack.^$all,domain=~fitgirl-repacks.site
+||fitgirlrepacks.^$all,domain=~fitgirl-repacks.site
+||fitgirlrepack.^$all,domain=~fitgirl-repacks.site
+||fitgirls-repack.*^$all,domain=~fitgirl-repacks.site
+||fitgirl-repacks-site.org^$doc,domain=~fitgirl-repacks.site
+||fitgirlrepacksite.com^$all,domain=~fitgirl-repacks.site
+||fitgirl.cc^$all,domain=~fitgirl-repacks.site
+@@||fitgirl-repacks.site^$image,popup
