@@ -1,23 +1,23 @@
 [uBlock Origin]
 ! Title: Unsafe Piracy Sites Blocker (UPSB)
-! Last Modified: 18:04 26/05/2024
+! Last Modified: 18:31 26/05/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Blocks untrusted / unsafe sites for piracy.
 ! Works with: uBlock Origin.
 
 ! Unsafe software
-||en.softonic.^$all
-||bittorrent.^$all
-||crackshash.^$all
+||en.softonic.$document
+||bittorrent.$document
+||crackshash.$document
 ||vfxdownloads.net
 ||crackedfully.com
 ||portable4pc.com
 ||portable4pc.com
 ||vfxdownload.com
-||vstorrent.^$all
+||vstorrent.$document
 ||allpcworld.com
 ||app-valley.vip
-||utorrent.^$all
+||utorrent.$document
 ||getintopc.com
 ||frostwire.com
 ||bitcomet.com
@@ -33,11 +33,11 @@
 ||yasdl.com
 
 ! Unsafe major sites
-||thepiratebay.^$all
+||thepiratebay.$document
 ||1337x.vpnonly.site
 ||kickasstorrents.to
 ||torrentlite.org
-||1377x.^$all
+||1377x.$document
 
 ! Fake RARBG
 ||therarbg.com
@@ -55,7 +55,7 @@
 ||z-library.blog
 ||z-library.help
 ||zlibrary.lol
-||z-lib.^$all
+||z-lib.$document
 ||zlibrary.to
 ||zlibrary.is
 ||zlibis.com
@@ -63,7 +63,7 @@
 ||zlib.to
 
 ! Unsafe games
-||steamunlocked.^$all
+||steamunlocked.$document
 ||empresstorrents.com
 ||blackboxrepacke.com
 ||oceansofgamess.com
@@ -81,23 +81,23 @@
 ||wifi4games.com
 ||igg-games.com
 ||gamepciso.com
-||coolrom.^$all
+||coolrom.$document
 ||aimhaven.com
 ||crohasit.net
 ||game3rb.com
 ||qoob.name
 
 ! Minecraft
-||tlauncher.^$all
-||klauncher.^$all
+||tlauncher.$document
+||klauncher.$document
 
 ! FitGirl
-||fitgirl-repacks.^$all,domain=~fitgirl-repacks.site
-||fitgirl-repack.^$all,domain=~fitgirl-repacks.site
-||fitgirlrepacks.^$all,domain=~fitgirl-repacks.site
-||fitgirlrepack.^$all,domain=~fitgirl-repacks.site
-||fitgirls-repack.*^$all,domain=~fitgirl-repacks.site
+||fitgirl-repacks.$document,domain=~fitgirl-repacks.site
+||fitgirl-repack.$document,domain=~fitgirl-repacks.site
+||fitgirlrepacks.$document,domain=~fitgirl-repacks.site
+||fitgirlrepack.$document,domain=~fitgirl-repacks.site
+||fitgirls-repack.*$document,domain=~fitgirl-repacks.site
 ||fitgirl-repacks-site.org^$doc,domain=~fitgirl-repacks.site
-||fitgirlrepacksite.com^$all,domain=~fitgirl-repacks.site
-||fitgirl.cc^$all,domain=~fitgirl-repacks.site
+||fitgirlrepacksite.com$document,domain=~fitgirl-repacks.site
+||fitgirl.cc$document,domain=~fitgirl-repacks.site
 @@||fitgirl-repacks.site^$image,popup
