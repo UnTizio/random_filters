@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Unsafe Piracy Sites Blocker (UPSB)
-! Last Modified: 18:31 26/05/2024
+! Last Modified: 18:33 26/05/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Blocks untrusted / unsafe sites for piracy.
 ! Works with: uBlock Origin.
@@ -9,15 +9,15 @@
 ||en.softonic.$document
 ||bittorrent.$document
 ||crackshash.$document
+||vstorrent.$document
+||utorrent.$document
 ||vfxdownloads.net
 ||crackedfully.com
 ||portable4pc.com
 ||portable4pc.com
 ||vfxdownload.com
-||vstorrent.$document
 ||allpcworld.com
 ||app-valley.vip
-||utorrent.$document
 ||getintopc.com
 ||frostwire.com
 ||bitcomet.com
@@ -50,12 +50,12 @@
 ||z-library-proxy.com
 ||zlibrary-global.com
 ||zlib-official.com
+||z-lib.$document
 ||z-library.live
 ||z-library.wiki
 ||z-library.blog
 ||z-library.help
 ||zlibrary.lol
-||z-lib.$document
 ||zlibrary.to
 ||zlibrary.is
 ||zlibis.com
@@ -69,6 +69,7 @@
 ||oceansofgamess.com
 ||elamigos-games.net
 ||steam-repacks.com
+||coolrom.$document
 ||gamefabrique.com
 ||gamestorrents.fm
 ||descargagame.com
@@ -81,7 +82,6 @@
 ||wifi4games.com
 ||igg-games.com
 ||gamepciso.com
-||coolrom.$document
 ||aimhaven.com
 ||crohasit.net
 ||game3rb.com
