@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Unsafe Piracy Sites Blocker (UPSB)
-! Last Modified: 21:21 26/05/2024
+! Last Modified: 00:49 28/05/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Blocks untrusted / unsafe sites for piracy.
 ! Works with: uBlock Origin.
@@ -63,7 +63,12 @@
 ||zlib.to
 
 ! Unsafe games
+||download-free-games.$document
+||pcgamestorrents.$document
+||worldof-pcgames.$document
 ||steamunlocked.$document
+||gamefabrique.$document
+||wifi4games.$document
 ||empresstorrents.com
 ||blackboxrepacke.com
 ||oceansofgamess.com
@@ -80,17 +85,22 @@
 ||gogunlocked.com
 ||nexus-games.net
 ||nosteamgames.ro
-||wifi4games.com
 ||igg-games.com
 ||gamepciso.com
 ||aimhaven.com
 ||crohasit.net
 ||game3rb.com
+||nosteam.ro
 ||qoob.name
 
 ! Minecraft
+||launchershiginima.$document
 ||tlauncher.$document
 ||klauncher.$document
+||polymc.$document
+
+||9minecraft.$document
+||7minecraft.$document
 
 ! FitGirl
 ||fitgirl-repacks.$document,domain=~fitgirl-repacks.site
