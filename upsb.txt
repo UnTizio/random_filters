@@ -1,9 +1,12 @@
 [uBlock Origin]
 ! Title: Unsafe Piracy Sites Blocker (UPSB)
-! Last Modified: 01:18 28/05/2024
+! Last Modified: 22:48 02/06/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Blocks untrusted / unsafe sites for piracy.
 ! Works with: uBlock Origin.
+
+! FMHY's Unsafe Sites Filterlist
+!#include https://raw.githubusercontent.com/WindowsAurora/FMHYFilterlist/main/filterlist.txt
 
 ! Unsafe software
 ||en.softonic.$document
