@@ -1,27 +1,24 @@
 [uBlock Origin]
 ! Title: Unsafe Piracy Sites Blocker (UPSB)
-! Last Modified: 22:48 02/06/2024
+! Last Modified: 22:55 02/06/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Blocks untrusted / unsafe sites for piracy.
 ! Works with: uBlock Origin.
 
-! FMHY's Unsafe Sites Filterlist
-!#include https://raw.githubusercontent.com/WindowsAurora/FMHYFilterlist/main/filterlist.txt
-
 ! Unsafe software
-||en.softonic.$document
 ||bittorrent.$document
 ||crackshash.$document
 ||vstorrent.$document
+||*getintopc.com^$all
 ||utorrent.$document
 ||vfxdownloads.net
 ||crackedfully.com
+||*softonic.*^$all
 ||portable4pc.com
 ||portable4pc.com
 ||vfxdownload.com
 ||allpcworld.com
 ||app-valley.vip
-||getintopc.com
 ||frostwire.com
 ||bitcomet.com
 ||sadeempc.com
@@ -36,9 +33,9 @@
 ||yasdl.com
 
 ! Unsafe major sites
-||thepiratebay.$document
+||*kickasstorrents.*^$all
+||*thepiratebay.*^$all
 ||1337x.vpnonly.site
-||kickasstorrents.to
 ||torrentlite.org
 ||1377x.$document
 
@@ -66,6 +63,7 @@
 ||zlib.to
 
 ! Unsafe games
+||ipcgames.com/ocean-of-games/*
 ||download-free-games.$document
 ||pcgamestorrents.$document
 ||worldof-pcgames.$document
@@ -82,13 +80,14 @@
 ||gamestorrents.fm
 ||descargagame.com
 ||repack-games.com
+||igg-games.*^$all
 ||elamigosweb.com
 ||apunkagames.com
 ||crotorrents.com
 ||gogunlocked.com
 ||nexus-games.net
 ||nosteamgames.ro
-||igg-games.com
+||igggames.*^$all
 ||gamepciso.com
 ||aimhaven.com
 ||crohasit.net
@@ -106,13 +105,22 @@
 ||9minecraft.$document
 ||7minecraft.$document
 
+! Massgrave fakes
+||massgrave.*^$all,domain=~massgrave.dev
+||massgrav.*^$all,domain=~massgrave.dev
+||massgraves.*^$all,domain=~massgrave.dev
+||*kmspico*.*^$all,domain=~forums.mydigitallife.net
+
 ! FitGirl
-||fitgirl-repacks.$document,domain=~fitgirl-repacks.site
-||fitgirl-repack.$document,domain=~fitgirl-repacks.site
-||fitgirlrepacks.$document,domain=~fitgirl-repacks.site
-||fitgirlrepack.$document,domain=~fitgirl-repacks.site
-||fitgirls-repack.*$document,domain=~fitgirl-repacks.site
-||fitgirl-repacks-site.org^$doc,domain=~fitgirl-repacks.site
-||fitgirlrepacksite.com$document,domain=~fitgirl-repacks.site
-||fitgirl.cc$document,domain=~fitgirl-repacks.site
+||f*tgirl*repack*.*^$all,domain=~fitgirl-repacks.site
 @@||fitgirl-repacks.site^$image,popup
+
+! TPB Warning from FMHY (https://github.com/WindowsAurora/FMHYFilterlist/)
+thepiratebay.org##main::before:style(content: 'Do NOT download any software or a game from The Pirate Bay, all the content is user generated and could (very likely) include malware in it.' !important; font-size: 30px !important; color: red !important; font-weight: bold !important;)
+thepiratebay.org##p
+thepiratebay.org##label:has-text(/Applications/)
+thepiratebay.org##label:has-text(/Games/)
+thepiratebay.org#?#li#st.list-entry:-abp-has(> .item-type:-abp-contains(/Applications/))
+thepiratebay.org#?#li#st.alt.list-entry:-abp-has(> .item-type:-abp-contains(/Applications/))
+thepiratebay.org#?#li#st.list-entry:-abp-has(> .item-type:-abp-contains(/Games/))
+thepiratebay.org#?#li#st.alt.list-entry:-abp-has(> .item-type:-abp-contains(/Games/))
