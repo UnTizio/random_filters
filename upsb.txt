@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Unsafe Piracy Sites Blocker (UPSB)
-! Last Modified: 23:06 02/06/2024
+! Last Modified: 12:57 07/06/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Blocks untrusted / unsafe sites for piracy.
 ! Works with: uBlock Origin.
@@ -9,8 +9,8 @@
 ||bittorrent.$document
 ||crackshash.$document
 ||vstorrent.$document
-||*getintopc.com^$all
 ||utorrent.$document
+||*getintopc.*^$all
 ||vfxdownloads.net
 ||crackedfully.com
 ||*softonic.*^$all
@@ -125,3 +125,7 @@ thepiratebay.org#?#li#st.list-entry:-abp-has(> .item-type:-abp-contains(/Applica
 thepiratebay.org#?#li#st.alt.list-entry:-abp-has(> .item-type:-abp-contains(/Applications/))
 thepiratebay.org#?#li#st.list-entry:-abp-has(> .item-type:-abp-contains(/Games/))
 thepiratebay.org#?#li#st.alt.list-entry:-abp-has(> .item-type:-abp-contains(/Games/))
+
+! Discord
+||bluesmods.*^all
+||vencord.*^$all,domain=~vencord.dev
