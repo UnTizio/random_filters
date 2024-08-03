@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 13:33 26/07/2024
+! Last Modified: 18:37 03/08/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -322,6 +322,9 @@ youtube.com##yt-live-chat-text-message-renderer:not(:has(#message:min-text-lengt
 !=====================================================
 ! YOUTUBE OTHER STUFF
 !=====================================================
+
+! WEIRD GRAPHIC GLITCH WHEN EMULATING CHROME WITH RESISTFINGERPRINT ENABLED
+youtube.com##.ytp-gradient-bottom
 
 ! SELF PROMOTION DIALOGS IN BOTTOM LEFT CORNER
 youtube.com##ytd-popup-container > tp-yt-paper-dialog > ytd-mealbar-promo-renderer, ytd-popup-container > tp-yt-paper-dialog > yt-mealbar-promo-renderer:has-text(/Claim Offer|Join now|Not Now|No thanks|YouTube TV|live TV|Live TV|movies|sports|Try it free|unlimited DVR|watch NFL/)
