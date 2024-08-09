@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 18:37 03/08/2024
+! Last Modified: 14:06 09/08/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -389,13 +389,16 @@ youtube.com###content > .ytd-rich-section-renderer.style-scope
 ! YOUTUBE PERFORMANCE IMPROVEMENTS
 !=====================================================
 
-! "DON'T BE EVIL" (ARTIFICIAL DELAY) https://libreddit.miaoute.net/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
+! "DON'T BE EVIL" (ARTIFICIAL DELAY) https://reddit.rtrace.io/r/firefox/comments/17ywbjj/comment/k9w1owh/?context=3
 youtube.com##+js(nano-stb, resolve(1), 5000, 0.001)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_em_rsp, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.web_enable_ab_rsp_cl, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_ab_rp_int, false)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.ab_pl_man, false)
 ||googlevideo.com/videoplayback$xhr,3p,method=get,domain=www.youtube.com
+
+! YT BUFFERING ISSUES https://reddit.rtrace.io/r/firefox/comments/1en0c28/people_with_yt_buffering_issues_check_your_dns_av/lh50zbw/?context=3
+@@||jnn-pa.googleapis.com^$domain=www.youtube.com
 
 ! REDUCE ANIMATIONS (ROLLING VIEWS, LIKES, PAUSING / UNPAUSING)
 youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.enable_web_ketchup_hero_animation, false)
