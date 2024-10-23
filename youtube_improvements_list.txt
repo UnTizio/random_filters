@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 21:33 23/10/2024
+! Last Modified: 21:45 23/10/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -439,3 +439,11 @@ youtube.com##.ytd-comment-view-model.style-scope.translate-button
 ! MASTHEAD BACKGROUND BLUR
 youtube.com##html, [light]:style(--yt-frosted-glass-desktop: rgba(255, 255, 255, 1.0) !important; --yt-spec-red-indicator: #FF0000 !important;)
 youtube.com##html[dark], [dark]:style(--yt-frosted-glass-desktop: rgba(15, 15, 15, 1.0) !important; --yt-spec-red-indicator: #FF0000 !important;)
+
+! RESIZE MASTHEAD BACKGROUND
+youtube.com###background:matches-path(/feed),:style(zoom:.0 !important) 
+youtube.com###background:matches-path(/results),:style(zoom:.0 !important)
+youtube.com###background:matches-path(/playlist),:style(zoom:.0 !important)
+youtube.com###background:matches-path(/watch),:style(zoom:.0 !important) 
+youtube.com###background:matches-path(/@),:style(zoom:.0 !important) 
+youtube.com###background:style(zoom:.50)
