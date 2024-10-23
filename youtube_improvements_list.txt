@@ -1,6 +1,6 @@
 [uBlock Origin]
 ! Title: Byelzebub's YouTube Improvements List
-! Last Modified: 11:08 23/10/2024
+! Last Modified: 21:33 23/10/2024
 ! Expires: 1 Days (Update Frequency)
 ! Description: Improve your YouTube experience, both in performance and usage.
 ! Works with: uBlock Origin.
@@ -437,6 +437,5 @@ youtube.com##+js(set, yt.config_.EXPERIMENT_FLAGS.searchbox_reporting, false)
 youtube.com##.ytd-comment-view-model.style-scope.translate-button
 
 ! MASTHEAD BACKGROUND BLUR
-youtube.com##.ytp-cairo-refresh:remove-class(ytp-cairo-refresh)
-youtube.com##.ytp-cairo-refresh-signature-moments:remove-class(ytp-cairo-refresh-signature-moments)
-youtube.com##[frosted-glass="without-chipbar"]:remove-attr(frosted-glass)
+youtube.com##html, [light]:style(--yt-frosted-glass-desktop: rgba(255, 255, 255, 1.0) !important; --yt-spec-red-indicator: #FF0000 !important;)
+youtube.com##html[dark], [dark]:style(--yt-frosted-glass-desktop: rgba(15, 15, 15, 1.0) !important; --yt-spec-red-indicator: #FF0000 !important;)
